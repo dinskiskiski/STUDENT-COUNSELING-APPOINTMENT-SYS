@@ -48,11 +48,17 @@
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item me-3 text-white">
                         Welcome, <strong><%= currentUserName %></strong>
+                        <% if ("ADMIN".equalsIgnoreCase(position)) { %>
+                            <span class="badge bg-danger ms-1">ADMIN</span>
+                        <% } %>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="StudentListServlet"><i class="fas fa-users"></i> Manage Students</a>
                     </li>
                     <% if ("ADMIN".equalsIgnoreCase(position)) { %>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ViewCounselorsServlet"><i class="fas fa-user-tie"></i> View Counselors</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="Counselor/CreateCounselor.jsp"><i class="fas fa-plus-circle"></i> New Counselor</a>
                     </li>
@@ -262,7 +268,8 @@
                         </div>
                     </div>
 
-                </div> </div>
+                </div>
+            </div>
         </div>
     </div>
 

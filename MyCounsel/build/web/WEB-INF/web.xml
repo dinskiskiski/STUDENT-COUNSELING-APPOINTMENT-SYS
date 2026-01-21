@@ -9,6 +9,14 @@
         <servlet-name>UpdateProfileServlet</servlet-name>
         <servlet-class>controller.UpdateProfileServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewCounselorsServlet</servlet-name>
+        <servlet-class>controller.ViewCounselorsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteCounselorServlet</servlet-name>
+        <servlet-class>controller.DeleteCounselorServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -85,7 +93,7 @@
         <servlet-name>ViewAppointmentRecordServlet</servlet-name>
         <url-pattern>/ViewAppointmentRecordServlet</url-pattern>
     </servlet-mapping>
- <servlet>
+    <servlet>
         <servlet-name>ViewRecordServlet</servlet-name>
         <servlet-class>controller.ViewRecordServlet</servlet-class>
     </servlet>
@@ -131,6 +139,14 @@
     <servlet-mapping>
         <servlet-name>UpdateProfileServlet</servlet-name>
         <url-pattern>/UpdateProfileServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewCounselorsServlet</servlet-name>
+        <url-pattern>/ViewCounselorsServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteCounselorServlet</servlet-name>
+        <url-pattern>/DeleteCounselorServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>
