@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/LoginServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Student/student_dashboard.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/CounselorServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/student_list.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/model/Student.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/view_appointment.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/dao/AppointmentRecordDAO.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/RegisterServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Student/make_appointment.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/dao/CounselorDAO.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/LogoutServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/model/AppointmentRecord.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/DashboardServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/StudentRegister.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/model/Counselor.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/CancelAppointmentServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/dao/StudentDAO.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/StudentListServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/register.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/start_consultation.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/StudentEditServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/DeleteAppointmentServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/StudentDeleteServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/StartConsultationServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/view_student.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/AppointmentServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/student_edit.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/model/Appointment.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/controller/ViewAppointmentRecordServlet.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/login.jsp</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/dao/AppointmentDAO.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/src/java/util/DBConnection.java</file>
+            <file>file:/C:/Users/mhafi/OneDrive/Documents/NetBeansProjects/STUDENT-COUNSELING-SYSTEM-master/web/Counselor/counselor_dashboard.jsp</file>
+        </group>
+    </open-files>
+</project-private>
