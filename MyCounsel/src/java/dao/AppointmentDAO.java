@@ -163,36 +163,38 @@ public class AppointmentDAO {
     }
     
     
-    public List<Appointment> getAcceptedAppointments() {
-    List<Appointment> list = new ArrayList<>();
-    String sql = "SELECT a.*, s.STUDENTNAME, s.MATRIXNUMBER, c.COUNSELORNAME " +
-                 "FROM APPOINTMENT a " +
-                 "JOIN STUDENT s ON a.STUDENTID = s.STUDENTID " +
-                 "LEFT JOIN COUNSELOR c ON a.COUNSELORID = c.COUNSELORID " +
-                 "WHERE a.STATUS = 'Accepted'";
+    public List<Appointment> getAcceptedAppointments(String counselorID) {
+        List<Appointment> list = new ArrayList<>();
+        String sql = "SELECT a.*, s.STUDENTNAME, s.MATRIXNUMBER, c.COUNSELORNAME " +
+                     "FROM APPOINTMENT a " +
+                     "JOIN STUDENT s ON a.STUDENTID = s.STUDENTID " +
+                     "LEFT JOIN COUNSELOR c ON a.COUNSELORID = c.COUNSELORID " +
+                     "WHERE a.STATUS = 'Accepted' AND a.COUNSELORID = ?";
 
-    try (Connection con = DBConnection.createConnection();
-         PreparedStatement ps = con.prepareStatement(sql)) {
+        try (Connection con = DBConnection.createConnection();
+             PreparedStatement ps = con.prepareStatement(sql)) {
 
-        ResultSet rs = ps.executeQuery();
-        while (rs.next()) {
-            Appointment app = new Appointment();
-            app.setAppointmentID(rs.getInt("APPOINTMENTID"));
-            app.setAppointmentIssue(rs.getString("APPOINTMENTISSUE"));
-            app.setAppointmentDate(rs.getString("APPOINTMENTDATE"));
-            app.setAppointmentTime(rs.getString("APPOINTMENTTIME"));
-            app.setStatus(rs.getString("STATUS"));
-            app.setStudentID(rs.getString("STUDENTID"));
-            app.setStudentName(rs.getString("STUDENTNAME"));
-            app.setMatrixNumber(rs.getString("MATRIXNUMBER"));
-            app.setCounselorName(rs.getString("COUNSELORNAME")); // NEW
-            list.add(app);
+            ps.setString(1, counselorID); // Set the counselor ID parameter
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Appointment app = new Appointment();
+                app.setAppointmentID(rs.getInt("APPOINTMENTID"));
+                app.setAppointmentIssue(rs.getString("APPOINTMENTISSUE"));
+                app.setAppointmentDate(rs.getString("APPOINTMENTDATE"));
+                app.setAppointmentTime(rs.getString("APPOINTMENTTIME"));
+                app.setStatus(rs.getString("STATUS"));
+                app.setStudentID(rs.getString("STUDENTID"));
+                app.setStudentName(rs.getString("STUDENTNAME"));
+                app.setMatrixNumber(rs.getString("MATRIXNUMBER"));
+                app.setCounselorName(rs.getString("COUNSELORNAME"));
+                list.add(app);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
+        return list;
     }
-    return list;
-}
 
 
 // Get Appointment by ID (for StartConsultationServlet)
@@ -226,15 +228,18 @@ public Appointment getAppointmentByID(int appointmentID) {
 }
 
  // 7. Get Completed Appointments
-    public List<Appointment> getCompletedAppointments() {
+    public List<Appointment> getCompletedAppointments(String counselorID) {
         List<Appointment> list = new ArrayList<>();
+        // Added: AND a.COUNSELORID = ?
         String sql = "SELECT a.*, s.STUDENTNAME, s.MATRIXNUMBER " +
                      "FROM APPOINTMENT a JOIN STUDENT s ON a.STUDENTID = s.STUDENTID " +
-                     "WHERE a.STATUS = 'Completed'";
+                     "WHERE a.STATUS = 'Completed' AND a.COUNSELORID = ?";
         try (Connection con = DBConnection.createConnection();
-             PreparedStatement ps = con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = con.prepareStatement(sql)) {
 
+            ps.setString(1, counselorID); // Set the counselor ID parameter
+
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Appointment app = new Appointment();
                 app.setAppointmentID(rs.getInt("APPOINTMENTID"));
@@ -255,15 +260,18 @@ public Appointment getAppointmentByID(int appointmentID) {
     }
     
      // 8. Get Cancelled Appointments
-    public List<Appointment> getCancelledAppointments() {
+    public List<Appointment> getCancelledAppointments(String counselorID) {
         List<Appointment> list = new ArrayList<>();
+        // Added: AND a.COUNSELORID = ?
         String sql = "SELECT a.*, s.STUDENTNAME, s.MATRIXNUMBER " +
                      "FROM APPOINTMENT a JOIN STUDENT s ON a.STUDENTID = s.STUDENTID " +
-                     "WHERE a.STATUS = 'Cancelled'";
+                     "WHERE a.STATUS = 'Cancelled' AND a.COUNSELORID = ?";
         try (Connection con = DBConnection.createConnection();
-             PreparedStatement ps = con.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            
+            ps.setString(1, counselorID); // Set the counselor ID parameter
 
+            ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Appointment app = new Appointment();
                 app.setAppointmentID(rs.getInt("APPOINTMENTID"));

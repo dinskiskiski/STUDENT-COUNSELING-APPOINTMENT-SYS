@@ -113,7 +113,7 @@ public class StudentDAO {
 
     // 5. UPDATE student info
     public boolean updateStudent(Student student) {
-        String sql = "UPDATE STUDENT SET STUDENTNAME=?, STUDENTEMAIL=?, STUDENTPHONE=?, COURSE=?, MATRIXNUMBER=? WHERE STUDENTID=?";
+        String sql = "UPDATE STUDENT SET STUDENTNAME=?, STUDENTEMAIL=?, STUDENTPHONE=?, COURSE=? WHERE STUDENTID=?";
         try (Connection con = DBConnection.createConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
@@ -121,8 +121,7 @@ public class StudentDAO {
             ps.setString(2, student.getStudentEmail());
             ps.setString(3, student.getStudentPhone());
             ps.setString(4, student.getCourse());
-            ps.setString(5, student.getMatrixNumber());
-            ps.setString(6, student.getStudentID());
+            ps.setString(5, student.getStudentID());
 
             return ps.executeUpdate() > 0;
 

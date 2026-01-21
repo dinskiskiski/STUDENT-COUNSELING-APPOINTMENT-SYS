@@ -159,7 +159,7 @@
                                 </thead>
                                 <tbody>
                                     <% 
-                                        List<Appointment> accepted = new AppointmentDAO().getAcceptedAppointments();
+                                        List<Appointment> accepted = new AppointmentDAO().getAcceptedAppointments(counselorID);
                                         if (accepted != null && !accepted.isEmpty()) {
                                             for (Appointment app : accepted) { 
                                     %>
@@ -200,7 +200,7 @@
                                 </thead>
                                 <tbody>
                                     <% 
-                                        List<Appointment> completed = new AppointmentDAO().getCompletedAppointments();
+                                        List<Appointment> completed = new AppointmentDAO().getCompletedAppointments(counselorID);
                                         if (completed != null && !completed.isEmpty()) {
                                             for (Appointment app : completed) { 
                                     %>
@@ -241,7 +241,7 @@
                                 </thead>
                                 <tbody>
                                     <% 
-                                        List<Appointment> cancelled = new AppointmentDAO().getCancelledAppointments();
+                                        List<Appointment> cancelled = new AppointmentDAO().getCancelledAppointments(counselorID);
                                         if (cancelled != null && !cancelled.isEmpty()) {
                                             for (Appointment app : cancelled) { 
                                     %>
